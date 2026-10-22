@@ -1,2 +1,9 @@
 .venv/
-*.csv
+__pycache__/
+.pytest_cache/
+data/*.csv
+*.xlsx
+*.zip
+hydroverra_results*.csv
+hydroverra_v1_results.csv
+.DS_Store

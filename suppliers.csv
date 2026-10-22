@@ -1,0 +1,14 @@
+category,supplier,model,rated_kw,h2_kg_per_h,capacity_kg,kwh_per_kg,min_load,capex_per_kw,capex_per_kg,cut_in_ms,rated_ms,cut_out_ms,pr,dc_voltage,certs,status,notes
+pv,PV Supplier A,PLACEHOLDER,,,,,,800,,,,,0.80,,,PLACEHOLDER,pr = performance ratio (system losses). Replace with quote
+pv,PV Supplier B,PLACEHOLDER,,,,,,950,,,,,0.84,,,PLACEHOLDER,Replace with quote
+wind,Wind Supplier A,PLACEHOLDER,,,,,,2200,,3.0,12.0,25.0,,,,PLACEHOLDER,Replace with quote and the real power curve
+wind,Wind Supplier B,PLACEHOLDER,,,,,,2600,,2.5,11.0,25.0,,,,PLACEHOLDER,Replace with quote and the real power curve
+electrolyser,Client spec (RFQ),SPEC,70.2,1.2,,54,0.10,,,,,,,800,,SPEC,Spec as sent. 70.2 kW / 1.2 kg/h = 58.5 kWh/kg (not 54) and 1.2 kg/h cannot refill in 120 h. min_load 0.10 is MY ASSUMPTION
+electrolyser,PEM Supplier A,PLACEHOLDER,,,,55,0.10,1400,,,,,,,,PLACEHOLDER,kwh_per_kg = electricity IN per kg H2 (system level). min_load = share of rated power
+electrolyser,PEM Supplier B,PLACEHOLDER,,,,52,0.20,1700,,,,,,,,PLACEHOLDER,Replace with datasheet
+fuel_cell,Client spec (RFQ),SPEC,177.2,10.74,,15.0,,,,,,,,450-750,CE; IEC 62282,SPEC,Spec as sent. 15.0 kWh/kg is DERIVED (161.1 kW rated / 10.74 kg/h). Minimum load not in spec
+fuel_cell,FC Supplier A,PLACEHOLDER,,,,16,0.05,1500,,,,,,,,PLACEHOLDER,kwh_per_kg = electricity OUT per kg H2
+fuel_cell,FC Supplier B,PLACEHOLDER,,,,18,0.10,1300,,,,,,,,PLACEHOLDER,Replace with datasheet
+tank,Client spec (RFQ),SPEC,,,283.5,,,,,,,,,,,SPEC,24 h x 10.74 kg/h x 1.10 reserve. Purity ISO 14687 Grade D
+tank,Tank Supplier A,PLACEHOLDER,,,,,,,600,,,,,,,PLACEHOLDER,capex_per_kg = cost per kg H2 stored
+tank,Tank Supplier B,PLACEHOLDER,,,,,,,450,,,,,,,PLACEHOLDER,Replace with quote
